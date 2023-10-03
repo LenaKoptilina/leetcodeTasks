@@ -1,39 +1,30 @@
-var findLonely = function (nums) {
+//2150. Find All Lonely Numbers in the Array
+// You are given an integer array nums. A number x is lonely when it appears only once,
+// and no adjacent numbers (i.e. x + 1 and x - 1) appear in the array.
+// Return all lonely numbers in nums. You may return the answer in any order.
+
+const findLonely = function (nums) {
     if (nums.length === 1) {
-        return nums
+        return nums;
     }
-    let resArray = []
+    let resArray = [];
     nums.sort((a, b) => a - b);
-    console.log(nums)
 
     function checkRightNeighbour(index) {
-        return index === nums.length - 1 ? true: nums[index] + 1 < nums[index + 1]
+        return index === nums.length - 1 ? true : nums[index] + 1 < nums[index + 1];
     }
 
     function checkLeftNeighbour(index) {
-        return index === 0 ? true: nums[index] - 1 > nums[index - 1]
+        return index === 0 ? true : nums[index] - 1 > nums[index - 1];
     }
 
     for (let i = 0; i < nums.length; i++) {
         if (checkRightNeighbour(i) && checkLeftNeighbour(i)) {
-            resArray.push(nums[i])
+            resArray.push(nums[i]);
         }
     }
 
-    console.log(resArray)
+    return resArray;
 };
 
-findLonely([1, 1, 1, 5, 2, 7, 3])
-
-
-// for (let i = 0; i < nums.length; i++) {
-//     if (i === 0 && checkRightNeighbour(i)) {
-//         resArray.push(nums[i])
-//     } else if (i === nums.length - 1 && checkLeftNeighbour(i)) {
-//         resArray.push(nums[i])
-//     } else if (checkRightNeighbour(i) && checkLeftNeighbour(i)) {
-//         resArray.push(nums[i])
-//     }
-// }
-
-
+console.log(findLonely([1, 1, 1, 5, 2, 7, 3]));

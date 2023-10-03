@@ -24,4 +24,4 @@ const rearrangeArray = function (nums) {
     return resultArr;
 }
 
-console.log(rearrangeArray([3, 1, -2, -5, 2, -4]));
+//console.log(rearrangeArray([3, 1, -2, -5, 2, -4]));

@@ -16,4 +16,4 @@ const capitalizeTitle = function (title) {
     return array.join(' ');
 };
 
-console.log(capitalizeTitle("I LOVE LEETCODE"));
+//console.log(capitalizeTitle("I LOVE LEETCODE"));

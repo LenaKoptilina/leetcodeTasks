@@ -1,7 +1,7 @@
 const {expect} = require('chai');
 let fs = require('node:fs');
 let vm = require('node:vm');
-let code = fs.readFileSync('./firstTask.js');
+let code = fs.readFileSync('./tasks/firstTask.js');
 vm.runInThisContext(code)
 
 

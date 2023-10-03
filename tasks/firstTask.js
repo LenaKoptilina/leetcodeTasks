@@ -38,4 +38,4 @@ const divideString = function (s, k, fill) {
     return result;
 }
 
-console.log(divideString('fhfejft', 3, 'k'));
+//console.log(divideString('fhfejft', 3, 'k'));

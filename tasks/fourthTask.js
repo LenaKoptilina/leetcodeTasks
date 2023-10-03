@@ -27,4 +27,4 @@ const findLonely = function (nums) {
     return resArray;
 };
 
-console.log(findLonely([1, 1, 1, 5, 2, 7, 3]));
+//console.log(findLonely([1, 1, 1, 5, 2, 7, 3]));
